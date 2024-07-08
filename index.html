@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <script src="https://kit.fontawesome.com/7a81d65d77.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="flex p-3 bg-white justify-between items-center">
+        <a href="#" id="Brand" class="flex gap-3 items-center">
+            <img src="image/todo.png" alt="icon" class="object-cover max-w-12 max-h-12">
+            <span class="text-lg font-medium font-display">ToDestop</span>
+        </a>
+        <div id="nav-menu" class="md:flex hidden gap-12 md:gap-7">
+            <a href="#" class="font-medium hover:text-blue-700">Pricing</a>
+            <a href="#" class="font-medium hover:text-blue-700">Docs</a>
+            <a href="#" class="font-medium hover:text-blue-700">Changelog</a>
+            <a href="#" class="font-medium hover:text-blue-700">BLogs</a>
+            <a href="#" class="font-medium hover:text-blue-700">Login</a>
+        </div>
+        <button class="hidden md:flex gap-1 border border-gray-400 px-6 py-3 rounded-lg hover:border-gray-700">
+            <i class="fa-solid fa-atom mt-1"></i>
+            <h1>Electron Developers</h1>
+            <i class="fa-solid fa-arrow-right mt-1"></i>
+        </button>
+
+        <button class="p-2 md:hidden" onclick="handlemenu()">
+            <i class="fa-solid fa-bars" class="text-gray-600"></i>
+        </button>
+
+        <div id="nav-dialog" class="fixed bg-white inset-0 p-3 z-10 md:hidden">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="Brand" class="flex gap-3 items-center">
+                    <img src="image/todo.png" alt="icon" class="object-cover max-w-12 max-h-12">
+                    <span class="text-lg font-medium font-display">ToDestop</span>
+                </a>
+                <button class="p-2" onclick="handlemenu()">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+            <div class="flex flex-col mt-3 gap-1 font-medium">
+                <a href="#" class="p-5 border border-dashed hover:border-gray-700">Pricing</a>
+                <a href="#" class="p-5 border border-dashed hover:border-gray-700">Docs</a>
+                <a href="#" class="p-5 border border-dashed hover:border-gray-700">Changelog</a>
+                <a href="#" class="p-5 border border-dashed hover:border-gray-700">Blog</a>
+                <a href="#" class="p-5 border border-dashed hover:border-gray-700">Login</a>
+            </div>
+            <div>
+                <button class="flex gap-2 mt-1 p-5 border border-dashed hover:border-gray-700 rounded-lg">
+                    <i class="fa-solid fa-atom mt-1"></i>
+                    <h1>Electron Developers</h1>
+                    <i class="fa-solid fa-angles-right mt-1"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Header Part -->
+</body>
+<script src="script.js"></script>
+</html>
